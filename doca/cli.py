@@ -118,7 +118,7 @@ def _dummy_command_entry(project):
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] not in ['edit', 'ls']:
-        project_name = sys.argv[0]
+        project_name = sys.argv[1]
         project = Project.find_project(project_name)
         project.run_command(sys.argv[2:])
         return
